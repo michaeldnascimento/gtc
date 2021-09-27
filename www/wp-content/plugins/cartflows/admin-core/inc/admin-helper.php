@@ -518,7 +518,7 @@ class AdminHelper {
 		}
 
 		if ( $product ) {
-			$custom_price = $product->get_sale_price() ? $product->get_sale_price() : $product->get_regular_price();
+			$custom_price = $product->get_price( 'edit' );
 		}
 
 		return $custom_price;
@@ -622,11 +622,17 @@ class AdminHelper {
 
 					foreach ( $ab_test_archived_variations as $variation_in => $variation ) {
 
+						// Don't add hidden archived steps.
+						if ( get_post_meta( $variation['id'], 'wcf-hide-step', true ) ) {
+							unset( $ab_test_archived_variations[ $variation_in ] );
+							continue;
+						}
+
 						$ab_test_archived_variations[ $variation_in ]['actions'] = self::get_ab_test_step_archived_actions( $flow_id, $variation['id'], $variation['deleted'] );
 						$ab_test_archived_variations[ $variation_in ]['hide']    = get_post_meta( $variation['id'], 'wcf-hide-step', true );
 					}
 
-					$steps[ $in ]['ab-test-archived-variations'] = $ab_test_archived_variations;
+					$steps[ $in ]['ab-test-archived-variations'] = array_values( $ab_test_archived_variations );
 				}
 			}
 		}
@@ -791,7 +797,7 @@ class AdminHelper {
 
 		if ( $deleted ) {
 			$actions = array(
-				'archive-hide' => array(
+				'archive-hide'   => array(
 					'slug'        => 'hide',
 					'class'       => 'wcf-step-archive-hide',
 					'icon_class'  => 'dashicons dashicons-hidden',
@@ -799,6 +805,14 @@ class AdminHelper {
 					'before_text' => __( 'Deleted variation can\'t be restored.', 'cartflows' ),
 					'text'        => __( 'Hide', 'cartflows' ),
 					'link'        => '#',
+				),
+				'archive-delete' => array(
+					'slug'       => 'deleteArch',
+					'class'      => 'wcf-step-archive-delete',
+					'icon_class' => 'dashicons dashicons-trash',
+					'target'     => 'blank',
+					'text'       => __( 'Delete', 'cartflows' ),
+					'link'       => '#',
 				),
 			);
 		} else {

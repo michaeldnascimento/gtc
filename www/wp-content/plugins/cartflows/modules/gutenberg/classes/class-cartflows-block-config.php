@@ -434,7 +434,7 @@ if ( ! class_exists( 'Cartflows_Block_Config' ) ) {
 							'backgroundImageColor'    => '#abb8c3',
 							'gradientValue'           => '',
 							'errorLabelColor'         => '',
-							'errorFieldBorderColor'   => '',
+							'errorFieldBorderColor'   => '#e2401c',
 						),
 					),
 					'wcfb/optin-form'        => array(

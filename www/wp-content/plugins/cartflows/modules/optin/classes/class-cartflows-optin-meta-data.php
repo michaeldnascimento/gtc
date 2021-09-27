@@ -171,6 +171,7 @@ class Cartflows_Optin_Meta_Data extends Cartflows_Step_Meta_Base {
 			'settings' => array(
 				'global'         => array(
 					'title'  => __( 'Global Settings', 'cartflows' ),
+					'slug'   => 'global_settings',
 					'fields' => array(
 						'primary-color'       => array(
 							'type'  => 'color-picker',
@@ -189,6 +190,7 @@ class Cartflows_Optin_Meta_Data extends Cartflows_Step_Meta_Base {
 
 				'input-fields'   => array(
 					'title'  => __( 'Input Fields', 'cartflows' ),
+					'slug'   => 'input_fields',
 					'fields' => array(
 						'style'              => array(
 							'type'    => 'select',
@@ -292,6 +294,7 @@ class Cartflows_Optin_Meta_Data extends Cartflows_Step_Meta_Base {
 
 				'button-options' => array(
 					'title'  => __( 'Submit Button', 'cartflows' ),
+					'slug'   => 'button_options',
 					'fields' => array(
 						'button-text'               => array(
 							'type'        => 'text',
@@ -440,6 +443,7 @@ class Cartflows_Optin_Meta_Data extends Cartflows_Step_Meta_Base {
 			'settings' => array(
 				'shortcodes'    => array(
 					'title'    => __( 'Shortcodes', 'cartflows' ),
+					'slug'     => 'shortcodes',
 					'priority' => 10,
 					'fields'   => array(
 						'optin-shortcode' => array(
@@ -454,6 +458,7 @@ class Cartflows_Optin_Meta_Data extends Cartflows_Step_Meta_Base {
 				),
 				'general'       => array(
 					'title'    => __( 'General', 'cartflows' ),
+					'slug'     => 'general',
 					'priority' => 20,
 					'fields'   => array(
 						'title'     => array(
@@ -481,6 +486,7 @@ class Cartflows_Optin_Meta_Data extends Cartflows_Step_Meta_Base {
 
 				'settings'      => array(
 					'title'    => __( 'Fields Settings', 'cartflows' ),
+					'slug'     => 'fields_settings',
 					'priority' => 30,
 					'fields'   => array(
 						'optin-pass-fields'          => array(
@@ -514,6 +520,7 @@ class Cartflows_Optin_Meta_Data extends Cartflows_Step_Meta_Base {
 				),
 				'optin-scripts' => array(
 					'title'    => __( 'Custom Script', 'cartflows' ),
+					'slug'     => 'custom_script',
 					'priority' => 40,
 					'fields'   => array(
 						'wcf-optin-custom-script' => array(

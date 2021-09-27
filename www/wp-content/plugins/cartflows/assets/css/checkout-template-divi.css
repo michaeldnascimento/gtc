@@ -33,9 +33,7 @@
     background-color: #fff;
     background-image: none;
     border: 1px solid #d4d4d4;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
-    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
@@ -126,9 +124,7 @@
     width: 16px;
     min-width: 16px;
     -webkit-appearance: none;
-    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
     box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
-    -webkit-transition: .05s border-color ease-in-out;
     transition: .05s border-color ease-in-out;
 }
 /*.et_pb_module #wcf-embed-checkout-form .woocommerce .woocommerce-shipping-fields [type="checkbox"]:checked, 
@@ -168,9 +164,7 @@
     width: 16px;
     min-width: 16px;
     -webkit-appearance: none;
-    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
     box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
-    -webkit-transition: .05s border-color ease-in-out;
     transition: .05s border-color ease-in-out;
 }
 
@@ -178,13 +172,11 @@
 .et_pb_module #wcf-embed-checkout-form .woocommerce .woocommerce-shipping-fields [type="checkbox"]:focus,
 .et_pb_module #wcf-embed-checkout-form .woocommerce #payment input[type=radio]:focus{
     border-color: #F16334;
-    -webkit-box-shadow: 0 0 2px rgba(241, 99, 52,.8);
     box-shadow: 0 0 2px rgba(241, 99, 52,.8);
 }
 
 .et_pb_module #wcf-embed-checkout-form .woocommerce #payment input[type=radio]:checked:before{
     background-color: #F16334;
-    -webkit-border-radius: 50px;
     border-radius: 50px;
     content: "\2022";
     font-size: 24px;
@@ -263,10 +255,6 @@
 
 .et_pb_module #wcf-embed-checkout-form .wcf-custom-coupon-field{
     -js-display: flex;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
     margin-bottom: 25px;
     margin-top: 25px;
@@ -328,14 +316,12 @@
     border-style: none;
     border-width: 2px;
     border-color: red;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
     display: inline-block;
 }
 
 .et_pb_module #wcf-embed-checkout-form .wcf-bump-order-style-2 {
     border: 2px red dashed;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
 }
 

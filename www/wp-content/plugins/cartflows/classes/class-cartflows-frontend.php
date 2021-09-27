@@ -80,6 +80,8 @@ class Cartflows_Frontend {
 
 				$thankyou_step_id = wcf()->flow->get_thankyou_page_id( $order );
 
+				$thankyou_step_id = apply_filters( 'cartflows_checkout_next_step_id', $thankyou_step_id, $order, $checkout_id );
+
 				if ( $thankyou_step_id ) {
 
 					$order_recieve_url = get_permalink( $thankyou_step_id );
@@ -424,8 +426,12 @@ class Cartflows_Frontend {
 			'next_step'              => $next_step_link,
 			'page_template'          => $page_template,
 			'is_checkout_page'       => _is_wcf_checkout_type(),
+			/* Remove it after two updates. 1.7.0 added for backward compatibility */
 			'fb_active'              => $fb_active,
 			'wcf_ga_active'          => $ga_active,
+			/* Remove it after two updates */
+			'fb_setting'             => $fb_active,
+			'ga_setting'             => $ga_active,
 			'active_checkout_cookie' => CARTFLOWS_ACTIVE_CHECKOUT,
 		);
 

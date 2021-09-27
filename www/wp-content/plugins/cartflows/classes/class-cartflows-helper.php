@@ -475,7 +475,7 @@ class Cartflows_Helper {
 	 * @param int    $post_id Post id.
 	 * @return  boolean.
 	 */
-	public static function add_checkout_field( $type, $field_key, $field_data = array(), $post_id ) {
+	public static function add_checkout_field( $type = '', $field_key = '', $field_data = array(), $post_id = 0 ) {
 
 		$fields = self::get_checkout_fields( $type, $post_id );
 

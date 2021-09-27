@@ -43,6 +43,7 @@ class FlowMeta {
 		$settings = array(
 			'general'       => array(
 				'title'    => __( 'General ', 'cartflows' ),
+				'slug'     => 'general',
 				'fields'   => array(
 					'flow_title'    => array(
 						'type'  => 'text',
@@ -82,6 +83,7 @@ class FlowMeta {
 			),
 			'sandbox'       => array(
 				'title'    => __( 'Sandbox', 'cartflows' ),
+				'slug'     => 'sandbox',
 				'fields'   => array(
 					'sandbox_mode' => array(
 						'type'  => 'checkbox',
@@ -95,6 +97,7 @@ class FlowMeta {
 			),
 			'analytics'     => array(
 				'title'    => __( 'Analytics', 'cartflows' ),
+				'slug'     => 'analytics',
 				'fields'   => array(
 					'analtics_option' => array(
 						'type'  => 'checkbox',
@@ -108,6 +111,7 @@ class FlowMeta {
 			),
 			'custom-script' => array(
 				'title'    => __( 'Custom Script', 'cartflows' ),
+				'slug'     => 'custom_script',
 				'fields'   => array(
 					'script_option' => array(
 						'type'    => 'textarea',

@@ -52,6 +52,7 @@ class AbSteps extends AjaxBase {
 
 		$ajax_events = array(
 			'hide_archive_ab_test_variation',
+			'permanent_delete_archive_ab_test_variation',
 			'save_ab_test_setting',
 		);
 
@@ -99,6 +100,81 @@ class AbSteps extends AjaxBase {
 			'status' => true,
 			/* translators: %s flow id */
 			'text'   => sprintf( __( 'Step successfully hidden - %s', 'cartflows' ), $step_id ),
+		);
+
+		wp_send_json( $result );
+	}
+
+	/**
+	 * Register ajax events.
+	 *
+	 * @since 1.0.0
+	 * @return void
+	 */
+	public function permanent_delete_archive_ab_test_variation() {
+
+		$response_data = array( 'messsage' => $this->get_error_msg( 'permission' ) );
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( $response_data );
+		}
+
+		/**
+		 * Nonce verification
+		 */
+		if ( ! check_ajax_referer( 'cartflows_permanent_delete_archive_ab_test_variation', 'security', false ) ) {
+			$response_data = array( 'messsage' => $this->get_error_msg( 'nonce' ) );
+			wp_send_json_error( $response_data );
+		}
+
+		if ( isset( $_POST['step_id'] ) ) {
+			$step_id = intval( $_POST['step_id'] );
+		}
+
+		if ( isset( $_POST['flow_id'] ) ) {
+			$flow_id = intval( $_POST['flow_id'] );
+		}
+
+		if ( isset( $_POST['control_id'] ) ) {
+			$control_id = intval( $_POST['control_id'] );
+		}
+		$result = array(
+			'status' => false,
+			/* translators: %s step id */
+			'text'   => sprintf( __( 'Can\'t delete a variation for this step - %s', 'cartflows' ), $step_id ),
+		);
+
+		if ( ! $step_id || ! $flow_id ) {
+			wp_send_json( $result );
+		}
+
+		$flow_steps = get_post_meta( $flow_id, 'wcf-steps', true );
+
+		foreach ( $flow_steps as $step => $control_step ) {
+
+			if ( $control_step['id'] === $control_id ) {
+
+				$archived_variation = $control_step['ab-test-archived-variations'];
+
+				foreach ( $archived_variation as $variations => $variation ) {
+
+					if ( $variation['id'] === $step_id ) {
+						unset( $archived_variation[ $variations ] );
+
+						$flow_steps[ $step ]['ab-test-archived-variations'] = array_values( $archived_variation );
+						break;
+					}
+				}
+				break;
+			}
+		}
+
+		update_post_meta( $flow_id, 'wcf-steps', $flow_steps );
+
+		$result = array(
+			'status' => true,
+			/* translators: %s flow id */
+			'text'   => sprintf( __( 'Step deleted - %s', 'cartflows' ), $step_id ),
 		);
 
 		wp_send_json( $result );

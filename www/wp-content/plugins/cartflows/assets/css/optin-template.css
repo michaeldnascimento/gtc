@@ -10,8 +10,6 @@
 
 .cartflows-container .wcf-optin-form,
 .cartflows-container .wcf-optin-form * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -115,7 +113,6 @@
 }
 
 .wcf-optin-form .woocommerce #payment input[type=radio]{
-    -webkit-border-radius: 50%;
     border-radius: 50%;
     margin-right: 4px;
     line-height: 10px;
@@ -151,9 +148,7 @@
     width: 16px;
     min-width: 16px;
     -webkit-appearance: none;
-    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
     box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
-    -webkit-transition: .05s border-color ease-in-out;
     transition: .05s border-color ease-in-out;
 }
 
@@ -163,13 +158,11 @@
 .wcf-optin-form .woocommerce #payment input[type=radio]:focus,
 .wcf-optin-form .woocommerce .woocommerce-account-fields input[type=checkbox]:focus{
     border-color: #F16334;
-    -webkit-box-shadow: 0 0 2px rgba(241, 99, 52,.8);
     box-shadow: 0 0 2px rgba(241, 99, 52,.8);
 }
 
 .wcf-optin-form .woocommerce #payment input[type=radio]:checked:before{
     background-color: #F16334;
-    -webkit-border-radius: 50px;
     border-radius: 50px;
     content: "\2022";
     font-size: 24px;
@@ -206,7 +199,6 @@
     width: 100%;
     max-width: 100%;
     padding: 0px;
-    -webkit-border-radius: 0px;
     border-radius: 0px;
     border: none;
     border-color: none;
@@ -222,7 +214,6 @@
 
 .wcf-optin-form .woocommerce-checkout #payment {
     background: unset;
-    -webkit-border-radius: 0;
     border-radius: 0;
 }
 
@@ -287,9 +278,7 @@
     background-image: none;
     border: 1px solid;
     border-color: #d4d4d4;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
-    -webkit-box-shadow: none;
     box-shadow: none;
     outline: none;
 }
@@ -331,9 +320,7 @@
     background-image: none;
     border: 1px solid;
     border-color: #d4d4d4;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
-    -webkit-box-shadow: none;
     box-shadow: none;
     height: auto;
 }
@@ -351,7 +338,6 @@
 .wcf-optin-form  textarea:focus,
 .wcf-optin-form .select2-container--open {
     border-color: #b3b3b3;
-    -webkit-box-shadow: none;
     box-shadow: none;
     outline: none;
 }
@@ -397,7 +383,6 @@
     padding: 16px 24px;
     font-size: 16px;
     line-height: 1.5;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
     color: #fff;
 }
@@ -447,12 +432,8 @@
 .wcf-optin-form .woocommerce-checkout .wcf-col2-set .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper,
 .wcf-optin-form .woocommerce-checkout .wcf-col2-set .woocommerce-shipping-fields .woocommerce-shipping-fields__field-wrapper{
     margin: 0 -7px;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -js-display: flex;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;   
     display: -webkit-flex; /* Safari 6.1+, firefox, chrome */
     flex-wrap: wrap;
@@ -562,7 +543,6 @@
     padding: 30px 20px 20px;
     margin: 2em 0;
     text-align: left;
-    -webkit-border-radius: 5px;
     border-radius: 5px;
 }
 
@@ -619,9 +599,7 @@
     background-color: #fff;
     background-image: none;
     border: 1px solid #d4d4d4;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
-    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
@@ -751,7 +729,5 @@ a.et_pb_more_button:after{
 */
 
 .thrv_wrapper .wcf-optin-form div{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }    

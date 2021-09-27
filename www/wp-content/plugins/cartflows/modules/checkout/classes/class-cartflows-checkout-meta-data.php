@@ -164,6 +164,7 @@ class Cartflows_Checkout_Meta_Data extends Cartflows_Step_Meta_Base {
 			'settings' => array(
 				'checkout-design'          => array(
 					'title'    => __( 'Checkout Design', 'cartflows' ),
+					'slug'     => 'checkout_design',
 					'priority' => 10,
 					'fields'   => array(
 						'checkout-skin'       => array(
@@ -205,6 +206,7 @@ class Cartflows_Checkout_Meta_Data extends Cartflows_Step_Meta_Base {
 
 				'checkout-text-design'     => array(
 					'title'    => __( 'Checkout Texts & Buttons', 'cartflows' ),
+					'slug'     => 'checkout_texts_buttons',
 					'priority' => 20,
 					'fields'   => array(
 						'advanced-options'          => array(
@@ -695,6 +697,7 @@ class Cartflows_Checkout_Meta_Data extends Cartflows_Step_Meta_Base {
 
 				'checkout-two-step-design' => array(
 					'title'      => __( 'Two-Step Design', 'cartflows' ),
+					'slug'       => 'two_step_design',
 					'priority'   => 40,
 					'fields'     => ! _is_cartflows_pro() ? array(
 						'product-option' => array(
@@ -716,6 +719,7 @@ class Cartflows_Checkout_Meta_Data extends Cartflows_Step_Meta_Base {
 
 				'product-option-design'    => array(
 					'title'    => __( 'Product Options', 'cartflows' ),
+					'slug'     => 'product_options',
 					'priority' => 50,
 					'fields'   => ! _is_cartflows_pro() ? array(
 						'product-option' => array(
@@ -724,8 +728,10 @@ class Cartflows_Checkout_Meta_Data extends Cartflows_Step_Meta_Base {
 						),
 					) : '',
 				),
+
 				'checkout-offer-design'    => array(
 					'title'    => __( 'Checkout Offer', 'cartflows' ),
+					'slug'     => 'checkout_offer',
 					'priority' => 70,
 					'fields'   => ! _is_cartflows_pro() ? array(
 						'product-option' => array(
@@ -876,6 +882,7 @@ class Cartflows_Checkout_Meta_Data extends Cartflows_Step_Meta_Base {
 			'settings' => array(
 				'shortcodes'        => array(
 					'title'    => __( 'Shortcodes', 'cartflows' ),
+					'slug'     => 'shortcodes',
 					'priority' => 10,
 					'fields'   => array(
 						'checkout-shortcode' => array(
@@ -890,6 +897,7 @@ class Cartflows_Checkout_Meta_Data extends Cartflows_Step_Meta_Base {
 				),
 				'general'           => array(
 					'title'    => __( 'General', 'cartflows' ),
+					'slug'     => 'general',
 					'priority' => 20,
 					'fields'   => array(
 						'title'     => array(
@@ -918,6 +926,7 @@ class Cartflows_Checkout_Meta_Data extends Cartflows_Step_Meta_Base {
 				// Checkout Fields.
 				'checkout-settings' => array(
 					'title'    => __( 'Checkout Settings', 'cartflows' ),
+					'slug'     => 'checkout_setting',
 					'priority' => 30,
 					'fields'   => array(
 
@@ -952,6 +961,7 @@ class Cartflows_Checkout_Meta_Data extends Cartflows_Step_Meta_Base {
 
 				'custom-scripts'    => array(
 					'title'    => __( 'Custom Script', 'cartflows' ),
+					'slug'     => 'custom_script',
 					'priority' => 40,
 					'fields'   => array(
 
@@ -966,7 +976,7 @@ class Cartflows_Checkout_Meta_Data extends Cartflows_Step_Meta_Base {
 			),
 		);
 
-		return $settings;
+		return apply_filters( 'cartflows_react_checkout_settings_fields', $settings );
 	}
 
 	/**

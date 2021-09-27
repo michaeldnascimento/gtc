@@ -2,8 +2,8 @@
 Contributors: sujaypawar, wpcrafter
 Tags: woocommerce, funnel builder, sales funnels, elementor, beaver builder
 Requires at least: 5.4
-Tested up to: 5.8.0
-Stable tag: 1.7.0
+Tested up to: 5.8.1
+Stable tag: 1.7.1
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -125,6 +125,13 @@ Glad you asked! Most normal users have less than 3 funnels on a single website, 
 5. Easily edit anything with your page builder.
 
 == Changelog ==
+
+= Version 1.7.1 - Monday, 20th September 2021 =
+* Fix: Vertical navigation in step and flow setting was not working for RTL and translation.
+* Fix: Showing blank screen if the step title is blank.
+* Fix: Input field style was not getting displayed for other checkout layouts in CartFlows-Gutenberg Blocks.
+* Fix: Input field required style not working in CartFlows-Gutenberg Block.
+* Fix: Fixed some notices which were displayed for PHP version 8.0
 
 = Version 1.7.0 - Wednesday, 21th July 2021 =
 * New: Multiple Order Bumps - Ability to display multiple order bumps on the checkout page with new styles.

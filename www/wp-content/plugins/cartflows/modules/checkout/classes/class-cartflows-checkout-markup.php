@@ -1499,6 +1499,7 @@ class Cartflows_Checkout_Markup {
 			$products = array(
 				array(
 					'product'     => $random_product[0]->ID,
+					'unique_id'   => wcf()->utils->get_unique_id(),
 					'add_to_cart' => true,
 				),
 			);

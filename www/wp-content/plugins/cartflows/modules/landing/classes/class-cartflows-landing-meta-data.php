@@ -91,6 +91,7 @@ class Cartflows_Landing_Meta_Data extends Cartflows_Step_Meta_Base {
 			'settings' => array(
 				'shortcode'       => array(
 					'title'    => __( 'Shortcode', 'cartflows' ),
+					'slug'     => 'shortcode',
 					'priority' => 10,
 					'fields'   => array(
 						'landing-shortcode' => array(
@@ -104,6 +105,7 @@ class Cartflows_Landing_Meta_Data extends Cartflows_Step_Meta_Base {
 				),
 				'general'         => array(
 					'title'    => __( 'General', 'cartflows' ),
+					'slug'     => 'general',
 					'priority' => 20,
 					'fields'   => array(
 						'title'     => array(
@@ -130,6 +132,7 @@ class Cartflows_Landing_Meta_Data extends Cartflows_Step_Meta_Base {
 				),
 				'landing-scripts' => array(
 					'title'    => __( 'Custom Script', 'cartflows' ),
+					'slug'     => 'custom_script',
 					'priority' => 30,
 					'fields'   => array(
 

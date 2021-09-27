@@ -229,7 +229,6 @@ body.cartflows-default {
 .woocommerce-order .woocommerce-bacs-bank-details,
 .woocommerce-order-details.mollie-instructions {
 	margin: 0 0 2em;
-	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	border: none;
 	width: 100%;
@@ -274,7 +273,6 @@ body.cartflows-default {
 	border: none;
 	border-bottom: 0;
 	background-color: inherit;
-	-webkit-border-radius: 0;
 	border-radius: 0;
 	font-family: inherit;
 	font-weight: inherit;
@@ -350,10 +348,6 @@ body.cartflows-default {
 
 .woocommerce-order .wcf-col2-set {
 	-js-display: flex;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -370,7 +364,6 @@ body.cartflows-default {
 .woocommerce-order .woocommerce-customer-details address {
 	border-left-width: 1px;
 	border-bottom-width: 1px;
-	-webkit-border-radius: 0;
 	border-radius: 0;
 	font-style: normal;
 }

@@ -1,3 +1,10 @@
+Version 1.7.1 - Monday, 20th September 2021
+- Fix: Vertical navigation in step and flow setting was not working for RTL and translation.
+- Fix: Showing blank screen if the step title is blank.
+- Fix: Input field style was not getting displayed for other checkout layouts in CartFlows-Gutenberg Blocks.
+- Fix: Input field required style not working in CartFlows-Gutenberg Block.
+- Fix: Fixed some notices which were displayed for PHP version 8.0
+
 Version 1.7.0 - Wednesday, 21th July 2021
 - New: Multiple Order Bumps - Ability to display multiple order bumps on the checkout page with new styles.
 - Fix: Wrong products appearing when multiple checkouts are opened simultaneously.
@@ -241,7 +248,7 @@ Version 1.3.0 - Tuesday, 15th October 2019
 - Fix: DIVI two step unused CSS removed.
 
 Version 1.2.6 - Tuesday, 27th August 2019
-- New: 'wp_body_open' action support added in templates. 
+- New: 'wp_body_open' action support added in templates.
 - Improvement: Added compatibility for a future release of CartFlows Pro.
 - Improvement: Checkout step type is included in LearnDash LMS template settings.
 - Fix: Setting options were not working properly on a multisite setup.
@@ -377,7 +384,7 @@ Version 1.1.2 - Friday, 4th January 2019
 
 Version 1.1.1 - Wednesday, 2nd January 2019
 - Improvement: Added compatibility for a future release of CartFlows Pro.
-- Improvement: Minor CSS and HTML changes. 
+- Improvement: Minor CSS and HTML changes.
 - Fix: Flatsome UX builder compatibility added.
 - Fix: OceanWP CSS overwrite issue.
 - Fix: Divi CSS issue.

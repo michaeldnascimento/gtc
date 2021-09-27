@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Elementor Website Builder - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-18 14:05:28+0000\n"
+"PO-Revision-Date: 2021-09-20 12:38:53+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,11 @@ msgstr ""
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: pt_BR\n"
 "Project-Id-Version: Plugins - Elementor Website Builder - Stable (latest release)\n"
+
+#. translators: %1$s Link open tag, %2$s: Link close tag.
+#: modules/shapes/widgets/text-path.php:131
+msgid "Want to create custom text paths with SVG? %1$sLearn More%2$s"
+msgstr "Deseja criar caminhos de texto personalizados com SVG? %1$sSaiba mais%2$s"
 
 #: includes/elements/column.php:418 includes/elements/section.php:709
 msgid "Luminosity"
@@ -52,6 +57,14 @@ msgstr "Ocultar em %s"
 #: includes/managers/controls.php:935
 msgid "Page Transitions"
 msgstr "Transições da página"
+
+#: core/experiments/manager.php:251
+msgid "The \"Font-Awesome Inline\" will render the Font-Awesome icons as inline SVG without loading the Font-Awesome library and its related CSS files and fonts."
+msgstr "Esta função renderiza os ícones do Font-Awesome como SVG em linha, sem carregar a biblioteca do Font-Awesome, arquivos CSS e fontes relacionadas."
+
+#: core/experiments/manager.php:250
+msgid "Font-Awesome Inline"
+msgstr "Font-Awesome em linha"
 
 #: core/app/modules/import-export/module.php:105
 msgid "Invalid URL"

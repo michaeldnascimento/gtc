@@ -35,8 +35,6 @@ h1 {
  */
 
 hr {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
     box-sizing: content-box; /* 1 */
     height: 0; /* 1 */
     overflow: visible; /* 2 */
@@ -72,7 +70,6 @@ abbr[title] {
     border-bottom: none; /* 1 */
     text-decoration: underline; /* 2 */
     -webkit-text-decoration: underline dotted;
-    -moz-text-decoration: underline dotted;
     text-decoration: underline dotted; /* 2 */
 }
 
@@ -226,8 +223,6 @@ fieldset {
  */
 
 legend {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box; /* 1 */
     color: inherit; /* 2 */
     display: table; /* 1 */
@@ -259,8 +254,6 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
 }
@@ -412,8 +405,6 @@ big {
 # Elements
 --------------------------------------------------------------*/
 html {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -421,8 +412,6 @@ html {
 *:before,
 *:after {
     /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
     box-sizing: inherit;
 }
 
@@ -490,7 +479,6 @@ input[type="reset"],
 input[type="submit"] {
     border: 1px solid;
     border-color: #ccc #ccc #bbb;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
     background: #e6e6e6;
     color: rgba(0, 0, 0, 0.8);
@@ -535,7 +523,6 @@ input[type="color"],
 textarea {
     color: #666;
     border: 1px solid #ccc;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
     padding: 3px;
 }
@@ -614,9 +601,7 @@ a:hover, a:active {
 
 .screen-reader-text:focus {
     background-color: #f1f1f1;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
-    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
     -webkit-clip-path: none;

@@ -90,6 +90,7 @@ class Cartflows_Thankyou_Meta_Data extends Cartflows_Step_Meta_Base {
 			'settings' => array(
 				'heading'          => array(
 					'title'  => __( 'Heading', 'cartflows' ),
+					'slug'   => 'heading',
 					'fields' => array(
 						'heading-color'       => array(
 							'type'  => 'color-picker',
@@ -111,6 +112,7 @@ class Cartflows_Thankyou_Meta_Data extends Cartflows_Step_Meta_Base {
 
 				'text'             => array(
 					'title'  => __( 'Text', 'cartflows' ),
+					'slug'   => 'text',
 					'fields' => array(
 						'text-color'       => array(
 							'type'  => 'color-picker',
@@ -135,6 +137,7 @@ class Cartflows_Thankyou_Meta_Data extends Cartflows_Step_Meta_Base {
 
 				'advanced-options' => array(
 					'title'  => __( 'Advanced Options', 'cartflows' ),
+					'slug'   => 'advanced_options',
 					'fields' => array(
 						'wcf-tq-advance-options-fields' => array(
 							'type'  => 'checkbox',
@@ -195,6 +198,7 @@ class Cartflows_Thankyou_Meta_Data extends Cartflows_Step_Meta_Base {
 			'settings' => array(
 				'shortcode'       => array(
 					'title'    => __( 'Shortcode', 'cartflows' ),
+					'slug'     => 'shortcode',
 					'priority' => 10,
 					'fields'   => array(
 						'thankyou-shortcode' => array(
@@ -209,6 +213,7 @@ class Cartflows_Thankyou_Meta_Data extends Cartflows_Step_Meta_Base {
 				),
 				'general'         => array(
 					'title'    => __( 'General', 'cartflows' ),
+					'slug'     => 'general',
 					'priority' => 20,
 					'fields'   => array(
 						'title'     => array(
@@ -235,6 +240,7 @@ class Cartflows_Thankyou_Meta_Data extends Cartflows_Step_Meta_Base {
 				),
 				'thankyou_fields' => array(
 					'title'    => __( 'Fields Settings', 'cartflows' ),
+					'slug'     => 'thankyou_fields',
 					'priority' => 30,
 					'fields'   => array(
 						'wcf-show-overview-section' => array(
@@ -266,6 +272,7 @@ class Cartflows_Thankyou_Meta_Data extends Cartflows_Step_Meta_Base {
 
 				'settings'        => array(
 					'title'    => __( 'Advanced Settings', 'cartflows' ),
+					'slug'     => 'advanced_setting',
 					'priority' => 40,
 					'fields'   => array(
 						'wcf-tq-text'                  => array(
@@ -303,6 +310,7 @@ class Cartflows_Thankyou_Meta_Data extends Cartflows_Step_Meta_Base {
 
 				'thanku-scripts'  => array(
 					'title'    => __( 'Custom Script', 'cartflows' ),
+					'slug'     => 'custom_script',
 					'priority' => 50,
 					'fields'   => array(
 						'wcf-thanku-custom-script' => array(

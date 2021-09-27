@@ -42,11 +42,11 @@
 	};
 
 	var trigger_facebook_events = function () {
-		if ( 'enable' === cartflows.fb_active[ 'facebook_pixel_tracking' ] ) {
+		if ( 'enable' === cartflows.fb_setting[ 'facebook_pixel_tracking' ] ) {
 			//Added offer purchase event script for backward compatibility.Remove this in 1.6.18 update.
 			//Start.
 			var purchase_event =
-				cartflows.fb_active[ 'facebook_pixel_purchase_complete' ];
+				cartflows.fb_setting[ 'facebook_pixel_purchase_complete' ];
 			if ( 'enable' === purchase_event ) {
 				var order_details = $.cookie( 'wcf_order_details' );
 				if (
@@ -59,9 +59,9 @@
 			}
 			//End.
 
-			if ( cartflows.fb_active[ 'facebook_pixel_id' ] != '' ) {
+			if ( cartflows.fb_setting[ 'facebook_pixel_id' ] != '' ) {
 				var add_payment_info_event =
-					cartflows.fb_active[ 'facebook_pixel_add_payment_info' ];
+					cartflows.fb_setting[ 'facebook_pixel_add_payment_info' ];
 				if ( 'enable' === add_payment_info_event ) {
 					jQuery( 'form.woocommerce-checkout' ).on(
 						'submit',
@@ -80,12 +80,12 @@
 
 	var trigger_google_events = function () {
 		if (
-			cartflows.wcf_ga_active[ 'enable_google_analytics' ] === 'enable'
+			cartflows.ga_setting[ 'enable_google_analytics' ] === 'enable'
 		) {
 			// Remove this offer purchase event script in 1.6.18.
 			//Start.
 			var ga_purchase_event =
-				cartflows.wcf_ga_active[ 'enable_purchase_event' ];
+				cartflows.ga_setting[ 'enable_purchase_event' ];
 			var ga_cookies = $.cookie( 'wcf_ga_trans_data' );
 
 			if ( typeof ga_cookies !== 'undefined' && ga_cookies != '[]' ) {
@@ -99,7 +99,7 @@
 
 			// Get all required Data
 			var ga_add_payment_info =
-				cartflows.wcf_ga_active[ 'enable_add_payment_info' ];
+				cartflows.ga_setting[ 'enable_add_payment_info' ];
 			var is_checkout_page = cartflows.is_checkout_page;
 
 			if ( is_checkout_page ) {

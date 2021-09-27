@@ -58,7 +58,6 @@
 .et_pb_module #wcf-thankyou-wrap .woocommerce-order .woocommerce-order-downloads,
 .et_pb_module #wcf-thankyou-wrap .woocommerce-order .woocommerce-bacs-bank-details {
     margin: 0 0 2em;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
     width: 100%;
     display: block;
@@ -101,7 +100,6 @@
     border:none; 
     border-bottom: 0;
     background-color: inherit;
-    -webkit-border-radius: 0;
     border-radius: 0;
     font-family: inherit;
     font-weight:inherit;
@@ -164,10 +162,6 @@
 
 .et_pb_module #wcf-thankyou-wrap .woocommerce-order .wcf-col2-set{
     -js-display: flex;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
 }
 
@@ -185,7 +179,6 @@
 .et_pb_module #wcf-thankyou-wrap .woocommerce-order .woocommerce-customer-details address {
     border-right-width: 1px;
     border-bottom-width: 1px;
-    -webkit-border-radius: 0;
     border-radius: 0;
     font-style: normal;
 }
